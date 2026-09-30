@@ -175,7 +175,8 @@ The initial application is planned around a simple, widely supported technology 
 
 # 🧩 High-Level Architecture
 
-```text
+The architecture is intended to remain as simple and portable as reasonably possible.
+A future developer should be able to understand, maintain and extend the application without being dependent on the original developer or on AI-generated code.
                     ┌─────────────────────┐
                     │     Eetlocal App    │
                     │                     │
@@ -205,3 +206,62 @@ The initial application is planned around a simple, widely supported technology 
                     │ Favourites          │
                     │ Reviews             │
                     └─────────────────────┘
+
+# 🗄️ Initial Data Model
+
+The initial database is expected to contain entities broadly along the following lines:
+
+Users
+  │
+  ├── Favourites
+  │
+  └── Reviews
+
+Vendors
+  │
+  ├── Products
+  │
+  ├── Locations
+  │
+  └── Schedules
+
+The exact database schema is defined separately in the Eetlocal Technical Specification.
+
+# 📂 Planned Project Structure
+
+The exact structure may evolve during development, but the project should aim for a clear separation of responsibilities.
+
+eetlocal/
+│
+├── app/
+│   └──                  # Expo Router screens/routes
+│
+├── components/
+│   └──                  # Reusable UI components
+│
+├── services/
+│   └──                  # API and external service interactions
+│
+├── hooks/
+│   └──                  # Reusable React hooks
+│
+├── types/
+│   └──                  # TypeScript types/interfaces
+│
+├── utils/
+│   └──                  # Helper functions
+│
+├── assets/
+│   └──                  # Images, icons and other static assets
+│
+├── docs/
+│   └──                  # Project documentation
+│
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+
+
+
+
